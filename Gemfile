@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
-
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
+
+gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -49,4 +50,7 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Use template engine haml
 gem 'haml'
+# Use geocoder to handle gps searches
+gem 'geocoder'
