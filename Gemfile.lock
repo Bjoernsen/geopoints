@@ -28,10 +28,16 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    better_errors (1.1.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (3.1.2)
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
+    callsite (0.0.11)
     celluloid (0.15.2)
       timers (~> 1.1.0)
     celluloid-io (0.15.0)
@@ -46,6 +52,7 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     columnize (0.8.9)
+    debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
@@ -82,6 +89,10 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta_request (0.3.0)
+      callsite
+      rack-contrib
+      railties
     method_source (0.8.2)
     mime-types (1.25.1)
     minitest (5.3.3)
@@ -93,6 +104,8 @@ GEM
       method_source (~> 0.8)
       slop (~> 3.4)
     rack (1.5.2)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.1.1)
@@ -177,12 +190,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  better_errors
+  binding_of_caller
   byebug
   coffee-rails (~> 4.0.0)
   guard-rspec
   haml
   jbuilder (~> 2.0)
   jquery-rails
+  meta_request
   rails (= 4.1.1)
   rspec-rails
   sass-rails (~> 4.0.3)
