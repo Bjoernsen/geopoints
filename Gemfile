@@ -54,3 +54,5 @@ end
 gem 'haml'
 # Use geocoder to handle gps searches
 gem 'geocoder'
+# Gmaps4rails is developed to simply create a Google Map with overlays
+gem 'gmaps4rails'
