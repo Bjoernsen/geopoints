@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/simi/mongoid-paranoia.git
+  revision: 4d9faf35b336e25619629b9e6514ff61bee169d6
+  specs:
+    mongoid-paranoia (0.1)
+      mongoid (> 3)
+
+GIT
   remote: https://github.com/mongoid/mongoid.git
   revision: e93a4837b0266db46c24aae172e184f57c847b04
   specs:
@@ -44,6 +51,7 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bson (2.2.3)
+    bson_ext (1.5.1)
     builder (3.2.2)
     byebug (3.1.2)
       columnize (~> 0.8)
@@ -212,6 +220,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
+  bson_ext
   byebug
   coffee-rails (~> 4.0.0)
   geocoder
@@ -222,6 +231,7 @@ DEPENDENCIES
   jquery-rails
   meta_request
   mongoid!
+  mongoid-paranoia!
   rails (= 4.1.1)
   rspec-rails
   sass-rails (~> 4.0.3)

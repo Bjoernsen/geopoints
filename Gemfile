@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.1'
 
 gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
+gem 'bson_ext'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -56,3 +57,6 @@ gem 'haml'
 gem 'geocoder'
 # Gmaps4rails is developed to simply create a Google Map with overlays
 gem 'gmaps4rails'
+
+# To get Paranoid
+gem 'mongoid-paranoia', github: 'simi/mongoid-paranoia'
