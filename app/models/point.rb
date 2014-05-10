@@ -4,7 +4,7 @@ class Point
   include Mongoid::Timestamps
   include Geocoder::Model::Mongoid
   
-  field :coordinates, type: Array    # [N, E] [latitude, longitude] --> 9.822864, 51.650772
+  field :coordinates, type: Array    # [E, N] [longitude, latitude] --> 9.822864, 51.650772
   field :address
   #belongs_to :type
 
@@ -17,6 +17,20 @@ class Point
   reverse_geocoded_by :coordinates
     
   before_validation :geocode_all
+  
+  
+  def latitude
+    # TODO: TEST
+    # TODO: YARD
+    coordinates[1]
+  end
+
+  def longitude
+    # TODO: TEST
+    # TODO: YARD
+    coordinates[0]
+  end
+  
   
   def geocode_all
     # TODO: TEST

@@ -57,6 +57,9 @@ gem 'haml'
 gem 'geocoder'
 # Gmaps4rails is developed to simply create a Google Map with overlays
 gem 'gmaps4rails'
+gem 'underscore-rails'
 
 # To get Paranoid
 gem 'mongoid-paranoia', github: 'simi/mongoid-paranoia'
+gem 'rabl'
+gem 'oj'

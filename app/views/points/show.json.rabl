@@ -1,0 +1,2 @@
+collection @point
+attributes :coordinates
