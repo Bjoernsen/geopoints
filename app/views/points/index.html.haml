@@ -5,16 +5,16 @@
     %tr
       %th Coordinates
       %th Address
-    
+
   %tbody
     - @points.each do |point|
       %tr
         %td
-          = link_to 'Show', point
-          = link_to 'Edit', edit_point_path(point)
-          = link_to 'Destroy', point, method: :delete, data: { confirm: 'Are you sure?' }
-        %td= point.coordinates
-        %td= point.address
+          =# link_to 'Show', point
+          =# link_to 'Edit', edit_point_path(point)
+          =# link_to 'Destroy', point, method: :delete, data: { confirm: 'Are you sure?' }
+        %td=# point.coordinates
+        %td=# point.address
 %br
 
 = link_to 'New Point', new_point_path
@@ -23,8 +23,8 @@
 %div{style:'width: 800px;'}
   %div{id:'map_container',style:'width: 800px; height: 400px;'}
 
-%script{src:'//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry'}
-%script{src:'//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js'}
+%script{src:'//maps.google.com/maps/api/js?sensor=false&libraries=geometry'}
+%script{src:'//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.1.2/src/markerclusterer_packed.js'}
 
 :coffee
   jQuery ->

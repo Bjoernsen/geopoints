@@ -11,9 +11,12 @@ jQuery ->
     points = get_points
     map_handler = Gmaps.build("Google")
     map_handler.buildMap
+      provider:
+        disableDefaultUI: false
       internal:
         id: map_id
     , ->
+
       if navigator.geolocation
         navigator.geolocation.getCurrentPosition add_points
       else
@@ -22,7 +25,7 @@ jQuery ->
       return
     map_handler.getMap().setZoom(12)
     window.map_handler = map_handler
-    
+
   add_points = (position)->
     # a) ersten den point auf den die map zentiert wird
     center_on_marker = map_handler.addMarker(
@@ -41,9 +44,9 @@ jQuery ->
     # c) wenn  @points schon points beinhaltet, dann diese auch rendern
     if points.length > 0
       map_handler.addMarkers(points)
-      
+
     window.map_handler = map_handler
-        
+
   update_points = ()->
     get_points_near_center()
     # entweder lösche alle bestehenden Marker aus der Karte und fülle diese neu auf
@@ -61,13 +64,13 @@ jQuery ->
       latitude: map_data.getCenter().lat()
       longitude: map_data.getCenter().lng()
     }
-    $.get('http://geopoints-111285.euw1-2.nitrousbox.com/points.json', params, (res, status, xhr)->
+    $.get('/points.json', params, (res, status, xhr)->
       map_handler.addMarkers(res)
     , 'json')
-    
+
   # wie bauen ich einen event linstener ein, wenn gezoomt, oder verschoben wird?
-  
-  
+
+
   #init_map()
   window.init_map = init_map
   window.map_handler = map_handler
